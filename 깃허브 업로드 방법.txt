@@ -1,0 +1,47 @@
+깃주소
+https://github.com/ijh950809-dotcom/bootstrap2025.git
+
+1. 처음작업시 
+ 1)전역구성 설정
+git config --global core.autocrlf true
+
+ 2)개인정보 입력
+git config --global user.name 'jh'
+git config --global user.email 'ijh950809@gmail.com'
+
+
+3)정보확인
+git config --global --list
+
+4)git init초기화(git 폴더 생성)
+ git init
+
+5)git status(정보확인, 파일목록 확인, 빨간색으로 표시)
+ git status
+
+6) git add .  (폴더안에 모든 폴더, 파일 추적함) 
+
+7)git status(정보확인, 파일목록 확인, 초록색으로 표시)
+ git status
+
+8)git commit -m '기록한 메세지 내용'
+  ->글자색상 흰색
+
+9) git log(기록 남긴 시점 확인)
+
+10) git remote add origin '원격주소'
+
+11)git remote -v   (연결확인)
+
+12) git branch -m master main
+
+13) git push origin +main    (파일, 폴더 업로드)
+
+----------------
+2. 수정하고 다시 업로드하는 경우
+6) git add .  (폴더안에 모든 폴더, 파일 추적함) 
+
+8)git commit -m '기록한 메세지 내용'
+  ->글자색상 흰색
+
+13) git push origin +main  (파일, 폴더 업로드)
