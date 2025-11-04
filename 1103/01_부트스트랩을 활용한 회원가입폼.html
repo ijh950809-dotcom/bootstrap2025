@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_부트스트랩을 활용한 회원가입폼</title>
+    <!-- 1. 부트스트랩 css서식 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- 2. 부트스트랩 js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <style>
+      body{
+        background:linear-gradient(135deg, #4e73df, #224abe);
+        height:100vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card{
+        border-radius:10px;
+        box-shadow: 0px 4px 8px rgba(0,0,0,.2);
+        width:100%;
+        max-width:500px;
+        /* width:70%;
+        margin:0 auto; */
+      }
+      h2{font-size:22px;}
+    </style>
+</head>
+<body>
+  <div class="card p-4">
+      <h2 class="text-center mb-4">01_부트스트랩을 활용한 회원가입폼</h2>
+    <form>
+      <legend>회원가입</legend>
+      <div class="row">
+
+      <div class="mb-3 col">
+        <label for="">이름</label>
+        <input type="text" class="form-control" placeholder="이름">
+      </div>
+
+      <div class="mb-3 col">
+        <label for="">별명</label>
+        <input type="text" class="form-control" placeholder="별명">
+      </div>
+
+      <div class="mb-3">
+        <label for="">이메일</label>
+        <input type="text" class="form-control" placeholder="you@example.com">
+      </div>
+
+      <div class="mb-3">
+        <label for="">주소</label>
+        <input type="text" class="form-control" placeholder="서울특별시 강남구">
+      </div>
+
+      <div class="mb-3">
+        <label for="">상세주소<span class="text-muted">(필수아님)</span></label>
+        <input type="text" class="form-control" placeholder="상세주소를 입력해주세요.">
+      </div>
+
+      <div class="col mb-3">
+        <label for="">가입경로</label>
+        <select class="form-select">
+          <option>선택</option>
+          <option>지인추천</option>
+          <option>광고</option>
+          <option>기타</option>
+        </select>
+      </div>
+
+      <div class="col mb-3">
+        <label for="">추천인 코드</label>
+        <input type="text" placeholder="추천인코드" class="form-control">
+      </div>
+
+    <div class="form-check mb-3">
+      <input type="checkbox" id="agree" class="form-check-input">
+      <label for="agree" class="form-check-label">개인정보 수집 및 이용에 동의합니다.</label>
+    </div>
+    <input type="submit" value="가입완료" class="btn btn-primary w-100">
+  </div>
+  </form>
+</div>
+</body>
+</html>

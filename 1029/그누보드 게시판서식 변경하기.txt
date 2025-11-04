@@ -1,0 +1,5 @@
+1. 파일질라 ftp서버에 접속
+2. 그누보드 board 폴더 - skin- board폴더 접속
+3. basic스킨폴더를  내컴퓨터에 다운로드
+4. basic스킨폴더 => miero_skin이름변경
+5. style.css파일에서 원하는 영역 서식을 찾아서 스타일을 변경한다.

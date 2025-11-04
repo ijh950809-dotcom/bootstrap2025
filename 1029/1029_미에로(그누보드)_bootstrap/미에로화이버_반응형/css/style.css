@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* 기본 크기 */
+/* 메뉴 크기 */
+/* 큰제목 */
+/* 작은제목 */
+body {
+  font-family: "맑은 고딕", arial, sans-serif;
+  font-size: 12px;
+  color: #333;
+}
+
+/* 제목서식 */
+.title2 {
+  font-family: "Noto Sans KR", serif;
+  font-size: 20px;
+  color: #00f;
+}
+
+.title3 {
+  font-size: 18px;
+  color: #f00;
+  line-height: 40px;
+}
+
+/* ...생략기호 나오게 하는 서식 */
+.p01 {
+  width: 300px;
+  border: 1px solid #333;
+  background: #ffff00;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 취소하기, 장바구니 버튼 서식 */
+/* 1. 글자서식 */
+/* 2. 버튼서식 */
+/* 글자서식과 버튼 서식을 합치기 */
+/* 버튼에 믹스인 함수 적용하기 */
+.btn {
+  font-family: "Noto Sans";
+  font-weight: bold;
+  font-size: 16px; /*16*/
+  border: 1px solid #333;
+  padding: 0px 10px;
+  width: 170px;
+  height: 56px;
+}
+
+.btn_w {
+  background: #fff;
+}
+
+.btn_c {
+  color: #fff;
+  background: rgb(144, 24, 160);
+}/*# sourceMappingURL=style.css.map */

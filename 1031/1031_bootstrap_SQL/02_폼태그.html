@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 02_폼태그</title>
+  <!-- 1. 부트스트랩 css서식 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 2. 부트스트랩 js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+  <h1>부트스트랩 02_폼태그</h1>
+  <p>다양한 폼 사용을 위한 폼 컨트롤 스타일, 레이아웃 옵션, 사용자 정의 컴포넌트의 예시와 사용 가이드입니다.</p>
+  <p>폼태그 사용시 form, fieldset, legend태그 사용.</p>
+  <form name="양식이름=로그인, 회원가입" method="전송방식(get/post)" action="받을서버주소">
+    <fieldset>
+      <legend>폼양식 제목(로그인, 회원가입...)</legend>
+      <p>
+        <label for="t01">1. text박스</label>
+        <input type="text" id="t01" maxlength="15" class="form-control-lg">
+      </p>
+
+      <p>
+        <label for="t02">2. password박스</label>
+        <input type="password" id="t02" maxlength="15" class="form-control-sm">
+        <div class="form-text">(패스워드는 특수문자를 포함 8-10까지 가능)</div>
+      </p>
+      <p>class="form-text"는 양식 작성시 설명문구를 넣고자할 경우 사용</p>
+
+      <p>폼 입력 양식의 크기 조정은 .form-control-lg, .form-control-sm으로 크기를 조정가능</p>
+
+      <p>.form-text을 사용하면 block요소와 간격을 쉽게 맞출 수 있도록 상단 여백이 추가. small, span을 사용하면 좋음.</p>
+
+      <h3>버튼 비활성화 - disabled</h3>
+      <p>disabled 불리언 속성을 추가하면 비활성화 외형이 되며, 포인터 이벤트가 삭제되면서 포커싱되지 않습니다.</p>
+      <input type="button" disabled value="비활성화된 버튼">
+      <input type="button" value="활성화된 버튼(클릭가능)">
+
+      <h3>읽기전용 - readonly</h3>
+      <p>readonly 불리언 속성을 추가함으로써 입력값의 변경을 막을 수 있습니다. disabled와 달리 readonly값은 </p>
+
+      <input type="text" placeholder="수량입력" class="form-control-sm" disabled aria-label="사용예1">
+      <input type="text" placeholder="수량입력" class="form-control-sm" readonly aria-label="사용예2">
+
+      <h3>라디오버튼</h3>
+      <input type="radio" name="a" id="r01" class="form-check-input">
+      <label for="r01" class="form-check-label">동의함</label>
+
+      <input type="radio" name="a" id="r02" class="form-check-input">
+      <label for="r02" class="form-check-label">동의안함</label>
+
+      <h3>체크박스</h3>
+      취미선택:<br>
+      <input type="checkbox" id="c01" class="form-check-input">
+      <label for="c01" class="form-check-label">요리</label>
+      <input type="checkbox" id="c02" class="form-check-input">
+      <label for="c02" class="form-check-label">운동</label>
+      <input type="checkbox" id="c03" class="form-check-input">
+      <label for="c03" class="form-check-label">게임</label>
+      <input type="checkbox" id="c04" class="form-check-input">
+      <label for="c04" class="form-check-label">기타</label>
+
+      <p>라디오 버튼과 같이 label에 .form-check-label,  input 태그에 .form-check-input 서식을 적용</p>
+
+      <h3>선택목록 - selsct, option</h3>
+      <select name="" id="" class="form-select">
+        <option value="">Family Site</option>
+        <option value="">네이버</option>
+        <option value="">다음</option>
+        <option value="">카카오</option>
+      </select>
+      <p>class=""form-select를 적용시 가로 100%로 커짐. 크기 조정시는  .form-select-lg or .form-select-sm 서식을 적용함</p>
+
+      <div class="input-group">
+        <select name="" id="" class="form-select" multiple size="2">
+          <option value="">옵션선택</option>
+          <option value="">값1</option>
+          <option value="">값2</option>
+          <option value="">값3</option>
+        </select>
+      </div>
+
+      <p>select태그에 multiple속성을 넣으면 다중 선택도 가능, size속성으로 크기도 조정가능</p>
+
+      <h3>다중 텍스트 박스</h3>
+      <textarea name=""  id="" cols="30" rows="10" class="form-control"></textarea>
+      <p>.form-control일 때는 가로 100%, form-control-lg, form-control-sm을 적용할 수 있음</p>
+
+      <p>높이를 적용하고 싶으면 css서식으로  조절가능</p>
+      <textarea style="height:300px;" name="" id="" cols="30" rows="10" class="form-control"></textarea>
+
+      <h3>파일첨부</h3>
+      <input type="file" class="btn">
+
+      <div class="input-group mb-3">
+        <label for="a" class="input-group-text">upload</label>
+        <input type="file" class="form-control" id="a">
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="file" class="form-control" id="b">
+        <label for="b" class="input-group-text">upload</label>
+      </div>
+
+      <p>input-group안에서 input, label태그의 순서를 변경하면 'upload'제목의 앞, 뒤 순서가 변경됨</p>
+
+      <h3>버튼종류</h3>
+      <input type="button" value="일반버튼" class="btn btn-dark">
+      <button class="btn btn-danger">일반버튼</button>
+      <input type="submit" value="전송버튼(입력한 데이터를 서버로 전송)" class="btn btn-primary">
+      <input type="reset" value="취소버튼" class="btn btn-secondary">
+      <input type="image" value="이미지버튼" src="이미지 경로" class="btn btn-primary">
+
+
+    </fieldset>
+  </form>
+</body>
+</html>

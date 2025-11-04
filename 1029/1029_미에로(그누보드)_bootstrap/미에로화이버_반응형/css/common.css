@@ -1,0 +1,245 @@
+@charset "UTF-8";
+/* 메인컬러 */
+/* common.css */
+header {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  z-index: 1000;
+}
+
+header > h1 {
+  width: 300px;
+  position: absolute;
+  top: 40px;
+  left: 3%;
+}
+
+header h1 img {
+  width: 100%;
+}
+
+/* toggle버튼 숨기기 */
+#toggle {
+  display: none;
+  background: rgba(0, 0, 0, 0.3);
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  position: absolute;
+  right: 3%;
+  top: 24px;
+  border: 1px solid #222222;
+}
+
+#toggle span {
+  background: #222222;
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  position: absolute;
+}
+
+#toggle span:first-child {
+  top: 12px;
+}
+
+#toggle span:nth-child(2) {
+  top: 22px;
+}
+
+#toggle span:last-child {
+  bottom: 12px;
+}
+
+/* gnb(메인메뉴)서식 */
+.gnb {
+  position: absolute;
+  right: 3%;
+  top: 40px;
+}
+
+.gnb > ul {
+  display: flex;
+}
+
+.gnb > ul > li {
+  margin: 0px 20px;
+  line-height: 40px;
+  position: relative; /* 서브의 부모요소 */
+}
+
+.gnb > ul > li > a {
+  font-size: 1.1rem; /* 16*1.1 = 17.2px */
+  color: #fff;
+}
+
+.gnb > ul > li:last-child > a {
+  background: #222222;
+  padding: 2px 10px;
+  transition: 0.3s;
+  border: 1px solid #222222;
+}
+
+.gnb > ul > li:last-child > a:hover {
+  background: #fff;
+  border: 1px solid #f36f21;
+  color: #f36f21;
+  text-decoration: none;
+}
+
+/* 서브메뉴 서식 */
+.sub {
+  border: 1px solid #ccc;
+  box-shadow: 0px 1px 1px #ccc;
+  border-radius: 4px;
+  padding: 2px;
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+
+.sub li {
+  text-align: center;
+}
+
+.sub li a {
+  font-size: 0.9rem;
+  display: block;
+  line-height: 36px;
+  transition: 0.5s;
+}
+
+.sub li:hover a {
+  background-color: #f36f21;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 서브메뉴 너비 조정 */
+.gnb li:fist-child .sub a, .gnb li:nth-child(2) .sub a {
+  padding: 0px 10px;
+}
+
+.gnb li:first-child .sub {
+  width: 150px;
+  left: -45px;
+}
+
+.gnb li:nth-child(2) .sub {
+  width: 200px;
+  left: -68px;
+}
+
+.more_box {
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* 버튼 서식 */
+a.more_btn {
+  background-color: #fff;
+  font-size: 14px;
+  padding: 6px 20px;
+  border-radius: 10px;
+  color: #2f2f2f;
+}
+
+/* 푸터서식 (완성하기) */
+footer {
+  width: 100%;
+  color: #fff;
+  background: #222222;
+}
+
+.f_inner {
+  background: #2f2f2f;
+}
+
+.f_inner > nav {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0px;
+}
+
+.f_inner > nav a {
+  transition: 0.5s;
+}
+
+.f_inner > nav a:hover {
+  text-decoration: none;
+}
+
+.f_inner dl {
+  line-height: 30px;
+}
+
+.f_inner dl dt a {
+  color: #f36f21;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.f_inner dl dd a {
+  color: #d1d1d1;
+}
+
+.f_inner dl dd a:hover {
+  text-decoration: underline;
+}
+
+/* sns서식 */
+.f_inner dl:last-child {
+  text-align: center;
+}
+
+.f_inner dl:last-child dt {
+  font-size: 1.2rem;
+}
+
+.f_inner dl i.fab {
+  font-size: 0.9rem;
+  color: #fff;
+  border: 1px solid #d1d1d1;
+  padding: 6px 8px;
+  margin: 18px 6px 0px 6px;
+  transition: 0.5s;
+}
+
+.f_inner dl dd i.fab:hover {
+  border: 1px solid #f36f21;
+  color: #f36f21;
+}
+
+/* top버튼 서식 */
+.top_btn {
+  position: fixed;
+  right: 1%;
+  bottom: 135px;
+  z-index: 1001;
+}
+
+/* 푸터하단 서식 */
+address {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  background: #222222;
+}
+
+address h2 {
+  width: 200px;
+  padding: 10px 0px 0px 5%;
+}
+
+address h2 img {
+  width: 100%;
+}
+
+address p {
+  padding-right: 3%;
+  line-height: 70px;
+}/*# sourceMappingURL=common.css.map */

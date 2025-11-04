@@ -1,0 +1,78 @@
+@charset "utf-8";
+/*style.css  */
+*{margin: 0px;padding: 0px;}
+body{
+  font-family: '맑은고딕', areal, sans-serif;
+  font-size: 13px;
+  color:#333;
+}
+ul,li,ol{
+  list-style:none;
+}
+a{
+  color:#333;
+  text-decoration: none;}
+.story{
+  background-color: #f36f21;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.story > h2{
+  color:#fff;
+  font-size: 26px;
+  margin:0 -450px;
+  width:100%;
+}
+
+.story > ul{
+  width:1200px;
+  margin:0 auto;
+  padding-bottom:50px;
+  display:grid;grid-gap:10px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, 300px);
+}
+
+.story > ul >li{
+  /* background-color: #000; */
+  /* width:350px; */
+  /* margin:0px 100px; */
+  /* border:3px solid #000; */
+  position:relative;
+  /* width:100%;
+  height:100%; */
+  /* object-fit:cover; */
+  /* box-sizing: border-box; */
+  overflow: hidden; 
+}
+
+
+  .f01{grid-area: 1/2/3/3;}
+
+  figure{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+img{width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+figcaption{
+  background-color: #000;
+  color:#fff;
+  width:100%;height:40px;
+  position:absolute;
+  left:0px;bottom:-40px;
+  transition: 0.5s; 
+  /* object-fit: cover; */
+  /* overflow: hidden; */
+}
+
+a:hover figcaption{
+  bottom:0px;
+}
+

@@ -1,0 +1,96 @@
+
+.mslide{}
+.mslide img{width:100%;}
+
+/*	갤러리 서식 */
+	#gallery{
+		background:#f36f21;
+	}
+	#gallery article h2{
+		font-size:34px;
+		font-weight:bold;
+		padding-bottom:20px;
+		color:#fff;
+	}
+	
+	#gallery > article{
+		width:1200px;margin:0px auto;
+	}
+	.girl {
+			width: 1200px;
+			display: grid;
+			grid-template-rows: 270px 270px 270px;
+			padding: 20px;grid-gap: 20px;
+			grid-template-areas:
+				"g01 g03 g04"
+				"g02 g03 g05"
+				"g06 g07 g08";
+		}
+		.girl figure {
+			overflow: hidden;
+			position:relative;
+		}
+		.girl figcaption {
+      height: 80px;
+      background-color: #111111;
+      position: absolute;
+      width:100%;bottom:-80px;
+      transition: 0.5s;
+	}
+
+		.girl figure:hover figcaption {
+				bottom:0px;
+		}
+		
+		.girl figcaption h6 {
+			font-size: 20px;
+			font-weight: bold;
+			color: #f36f21;
+			padding: 10px 0px 5px 20px;
+		}
+		.girl figcaption p {
+			font-size: 10px;
+			color: #ffffff;
+			padding: 5px 0px 0px 20px;
+		}
+		.girl figcaption span {
+			border: 1px solid #ffffff;
+			font-size: 12px;
+			color: #ffffff;
+			padding: 5px;
+			position: absolute;
+			right: 20px;
+			bottom: 15px;
+		}
+		.girl img {
+			width: 100%;
+		}
+		.girl figure:first-child {
+			grid-area: g01;
+		}
+		.girl figure:nth-child(2){
+			grid-area: g02;
+		}
+		.girl figure:nth-child(3) {
+			grid-area: g03;
+		}
+		.girl figure:nth-child(4) {
+			grid-area: g04;
+		}
+		.girl figure:nth-child(5) {
+			grid-area: g05;
+		}
+		.girl figure:nth-child(6) {
+			grid-area: g06;
+		}
+		.girl figure:nth-child(7) {
+			grid-area: g07;
+		}
+		.girl figure:last-child {
+			grid-area: g08;
+		}
+
+		#list{
+			padding:30px 0px;
+			background:#f36f21;
+		}

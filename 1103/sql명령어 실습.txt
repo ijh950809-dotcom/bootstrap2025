@@ -1,0 +1,102 @@
+xampp 루트주소(시작주소)
+
+http://localhost/
+http://127.0.0.1/
+-----------------------------------------------------------
+SQL : (Structure Query Language)의 약자 '구조화된 언어'
+
+DB언어 - CRUD = Create(생성), Read(조회), Update(수정), Delete(삭제)
+1. DDL(데이터 정의어)
+    create(생성), alter(수정), drop(삭제) 등..
+
+2. DML(데이터 조작어)
+   insert, select, update, delete
+    
+3. DCL(데이터 제어어)
+  grant(사용자에게 권한부여), remoke(사용자에게 권한 철회)
+
+
+\h : help의 약자로서 도움말 보기
+
+exit : mysql종료
+
+* db접속하기 
+mysql -uroot -p1234
+
+* 데이터베이스 조회(show)
+show databases;
+
+* 데이터베이스 삭제(drop)
+drop database 데이터베이스명;
+drop database test;
+ - Query OK(성공)
+
+* 데이터베이스 생성(create)
+create database 데이터베이스명;
+create database kdt;
+Query OK, 1 row affected (0.001 sec)
+
+* 데이터베이스 선택(use)
+use 데이터베이스명;
+use kdt;
+
+//db나가기
+exit;
+
+---------------------------------------------
+1. KDT 데이터베이스에 테이블 생성하기(CREATE)
+
+create table '테이블명'(컬럼명 컬럼형식(개수), 컬럼명 컬럼형식(개수), 컬럼명 컬럼형식(개수));
+create table customer(c_name varchar(20), c_address varchar(100), c_tel varchar(20));
+
+2. 테이블 조회하기
+show tables;
+
+3. 테이블에 데이터베이스 자료 입력하기(insert)
+insert into customer values('고객명', '주소', '연락처');
+
+insert into customer values('레스토랑가야', '강남구 역삼동 3번지', '02-1258-9956');
+
+4. 테이블 데이터 조회
+select * from '테이블명'
+select * from customer;
+
+5. 데이터 입력하기
+insert into customer values ('카페신라', '강남구 역삼4동 1번지', '02-1258-1313');
+insert into customer values ('서강대교식당', '강남구 역삼5동 6번지', '02-1258-1315');
+insert into customer values ('부바레스토랑', '송파구 문정동 8번지', '02-1258-6666');
+insert into customer values ('동경반점', '강남구 역삼8동 1번지', '02-1258-4321');
+
+6. 상품정보 입력을 위한 테이블 만들기(create)
+create table 테이블명(컬럼명 데이터형, 컬럼명 데이터형식);
+create table goods(g_code int(11), g_name varchar(20), g_cost int(11));
+
+7. 상품정보 데이터 입력하기(insert)
+insert into 테이블명 values(값1, 값2, 값3);
+
+insert into goods values (10, '만두세트', 300);
+insert into goods values (12, '해물국수세트', 880);
+insert into goods values (15, '냉동한식세트', 750);
+insert into goods values (22, '중국식만두', 200);
+insert into goods values (25, '꼬마만두', 250);
+insert into goods values (36, '보리빵', 300);
+insert into goods values (57, '녹차', 50);
+insert into goods values (68, '우롱차', 80);
+
+8. 상품정보 데이터 조회하기(select)
+select * from 테이블명;
+select * from goods;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

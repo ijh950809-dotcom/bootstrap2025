@@ -1,0 +1,47 @@
+//mixin.scss
+
+//변수선언
+$bgcolor_g:#ccc;
+$bgcolor_dark_g:#333;
+$time:0.5s;
+
+@mixin toggle_b{
+  width:40px;height:40px;
+  display:block;
+  position:relative;
+  cursor:pointer;
+}
+.toggle_btn{
+  border: 1px solid $bgcolor_g;
+  @include toggle_b;
+}
+@mixin bar{
+  width:38px;height:3px;
+  display:inline-block;
+  position:absolute;
+  left:1px;transition:$time;
+}
+.bar{
+  background:$bgcolor_dark_g;
+  @include bar;
+}
+.bar1{top:5px;}
+.bar2{top:18px;}
+.bar3{bottom:5px;}
+
+#toggle:checked + .toggle_btn .bar2{display:none;}
+#toggle:checked + .toggle_btn .bar1{
+  transform:rotate(45deg) translate(10px, 10px);
+}
+#toggle:checked + .toggle_btn .bar3{
+  transform:rotate(-45deg) translate(10px, -10px);
+}
+
+/* 자바스크립트로 적용할 서식 */
+.roate1{
+  transform:rotate(45deg) translate(10px, 10px) !important;
+}
+.none{display:none !important;}
+.roate2{
+  transform:rotate(-45deg) translate(10px, -10px) !important;
+}

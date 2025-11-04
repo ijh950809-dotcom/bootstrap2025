@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* 메인컬러 */
+$main_color:#f36f21;
+
+// 글자색상
+$txt_color_g:#333;
+$txt_color_w:#fff;
+
+//글자 기본크기
+$base_font_size:15px;
+
+/* 폰트, 크기, 색상, 링크 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', "맑은 고딕",arial, sans-serif;
+  font-size:$base_font_size;
+  color:$txt_color_g;
+} 
+a{
+  font-size:$base_font_size;
+  color:$txt_color_g;
+  text-decoration: none;
+}
+a:hover{text-decoration:underline;}

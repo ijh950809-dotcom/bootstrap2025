@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* 서브메뉴 서식 */
+.sub_cont{	clear:both;	overflow:hidden;	width:100%; }
+
+.sub_cont .title_back{
+	height:250px;
+	background-image:url('../img/sub_bg1.jpg');
+	background-size:100%;
+	background-position:0px -290px;
+}
+
+@media screen and (min-width:768px) and (max-width:1245px) {
+	.sub_cont .title_back{
+		background-position:0px -120px;
+	}
+}
+.sub_cont > h2{display:none;}
+.sub_cont > article{
+	width:1200px;
+	margin:0px auto;
+	text-align:center;
+}
+.sub_cont > article > h3{
+	font-size:26px;
+	padding:20px 0px;
+	text-align:center;
+}
+/* 게시판 삽입하기 */
+article iframe{
+	width:1000px;
+	height:800px;
+	border:none;
+display:inline-block;
+}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 - 01_이미지관련</title>
+  <!-- 1. 부트스트랩 css서식 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 2. 부트스트랩 js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .list{
+      width:1200px;
+      display:flex;
+      justify-content:space-evenly;
+    }
+    .list li{list-style:none;}
+    .list img{width:250px;}
+
+    figure{
+      width:20%;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h2>부트스트랩 - 01_이미지관련</h2>
+  <p>이미지태그를 사용하여 이미지를 삽입하고 다양하게 클래스를 적용해본다.</p>
+  <img src="./images/01.jpg" alt="">
+
+  <ul>
+    <li>class="rounded"</li>
+    <li>class="img-thumbnail"</li>
+    <li>class="rounded-circle img-circle"</li>
+    <li>class="img-fluid"</li>
+  </ul>
+
+  <h3>1. 모서리 둥글게 - css(border-radius)</h3>
+  <p>부트스트랩에서는 class='rounded'으로 모서리 둥글게 적용이 가능</p>
+  <img src="./images/01.jpg" alt="" class="rounded">
+
+  <h3>2. 모서리를 둥글게 하여 원이미지로 만듬.</h3>
+  <img src="./images/01.jpg" alt="" class="rounded-circle" width="200" height="200">
+
+  <h3>3. 이미지를 갤러리처럼 썸네일 이미지로 보이게 class="img-thumbnail</h3>
+  <ul class="list">
+    <li><img src="./images/01.jpg" alt="" class="img-thumbnail"></li>
+    <li><img src="./images/02.jpg" alt="" class="img-thumbnail"></li>
+    <li><img src="./images/03.jpg" alt="" class="img-thumbnail"></li>
+    <li><img src="./images/04.jpg" alt="" class="img-thumbnail"></li>
+  </ul>
+  <p>class='img-thumbnail' : border, padding, border-radius 속성값 모두 적용됨</p>
+
+  <h3>4. 이미지와 문자를 사용하여 콘텐츠 제작시 figure, figcaption 사용할 경우</h3>
+  <figure>
+    <img src="./images/04.jpg" alt="" class="img-fluid">
+    <figcaption>사진설명문구</figcaption>
+  </figure>
+
+  <p>이미지를 반응형으로 동작하는 클래스 class="img-fluid"적용시 width:100%, height:auto; 속성이 자동으로 들어감</p>
+  <p>부모의 크기가 변하면 이미지 크기도 같이 반응.(==반응형 이미지)</p>
+</body>
+</html>

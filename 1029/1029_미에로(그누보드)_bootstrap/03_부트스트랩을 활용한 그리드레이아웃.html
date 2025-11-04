@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03_부트스트랩을 활용한 그리드레이아웃</title>
+  <!-- 1. 부트스트랩 css cdn주소 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 2. 부트스트랩 자바스크립트 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    div{
+      border:2px solid #f00;
+      background:#ccc;
+      line-height:60px;
+    }
+  </style>
+</head>
+<body>
+  <h2>03_부트스트랩을 활용한 그리드레이아웃</h2>
+  <p>부트스트랩은 하나의 행에 반드시 12개의 열(컬럼)을 사용해야 합니다.</p>
+  <p>만약 12개의 열(컬럼)을 모두 사용하지 않으려면, 더 넓은 열(컬럼)을 만들기 위해 열(컬럼)들을 하나의 그룹으로 만들어 사용할 수 있습니다.</p>
+  <p>그리드 시스템에서는 화면의 너비별 5개의 클래스를 가지고 있습니다. 이미지 참고</p>
+  <img src="./images/breakpoint.jpg" alt="그리드 크기별 참고">
+
+  <h3>각 해상도별 클래스명 이해하기</h3>
+  <ul>
+    <li>해상도 576미만일 경우 클래스명 없음</li>
+    <li>해상도 576이상일 경우 클래스명 'sm' - 모바일 버전</li>
+    <li>해상도 768이상일 경우 클래스명 'md' - 태블릿 작은 버전</li>
+    <li>해상도 992이상일 경우 클래스명 'lg' - 태블릿 큰 버전</li>
+    <li>해상도 1200이상일 경우 클래스명 'xl' - PC버전 일반버전</li>
+    <li>해상도 1400이상일 경우 클래스명 'xxl' - PC버전 큰사이즈</li>
+  </ul>
+
+  <h3>그리드 레이아웃 실습</h3>  
+  <div class="row">
+    <div class="col-lg-12">12컬럼을 한줄에 배치</div>
+  </div>
+
+  <p>lg : 가로해상도 992px이상일 경우 가로영역을 12컬럼으로 인식(설정)</p>
+  <br><br>
+
+  <div class="row"><!-- 768px이상인 경우 -->
+    <div class="col-md-4">12컬럼을 4칸씩 병합하여 배치</div>
+    <div class="col-md-4">12컬럼을 4칸씩 병합하여 배치</div>
+    <div class="col-md-4">12컬럼을 4칸씩 병합하여 배치</div>
+  </div>
+
+  <p>md : 가로해상도가 768이상일 경우 가로영역의 컬럼을 3등분(4칸을 1칸으로 병합)하여 인식</p>
+  <br><br>
+
+  <h3>가로 해상도가 576px이상(sm)일 경우 12컬럼을 6칸씩 병합하기</h3>
+  <div class="row">
+    <div class="col-sm-6">12컬럼을 6칸씩 병합하여 배치</div>
+    <div class="col-sm-6">12컬럼을 6칸씩 병합하여 배치</div>
+  </div>
+
+  
+</body>
+</html>
