@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_반응형웹 완성</title>
+  <!-- 1. 부트스트랩 css서식 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 2. 부트스트랩 js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    main{overflow-y:hidden;}
+    .logo{height:50px;}
+    #myCarousel{}
+    .carousel-item{
+      position:relative;margin-bottom:10px;
+    }
+    .carousel-item h3{
+      position:absolute;z-index:100;
+      font-size:1.5rem;
+      color:#fff;
+      top:50%;left:50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .carousel-item img{width:100%;}
+
+  /* 2번 콘텐츠 서식 */
+    .cont2{
+      width:200px;height:200px;
+      margin:0 auto;
+    }
+    .cont2 img{
+      width:100%;height:100%;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    /* 점보트론 */
+    .jumbotron{
+      padding:50px;
+      padding-bottom:50px;
+      margin-bottom:50px;
+    }
+    .jumbotron h2{
+      font-size:6rem;
+      margin-bottom:20px;
+    }
+    .jumbotron .txt01{
+      padding:10px 0px 30px 0px;
+    }
+
+    .cont4 img{
+      max-width:100%;
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <header>
+    <!-- 내비게이션바 -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md" aria-label="내비게이션바">
+      <div class="container-fluid">
+        <a href="#" title="부트스트랩 로고">
+          <img src="./images/logo_white.svg" alt="" class="logo">
+        </a>
+
+        <!-- 모바일 해상도일 경우 나오는 전체메뉴 버튼 -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-label="전체메뉴" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 가로메뉴 -->
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a href="#" title="" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" title="" class="nav-link">menu</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" title="" class="nav-link disabled">Disabled</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" title="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">드롭다운</a>
+              <ul class="dropdown-menu">
+                <li><a href="#" title="" class="dropdown-item">menu1</a></li>
+                <li><a href="#" title="" class="dropdown-item">menu2</a></li>
+                <li><a href="#" title="" class="dropdown-item">menu3</a></li>
+                <li><a href="#" title="" class="dropdown-item">menu4</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- 검색폼 -->
+          <form role="search">
+            <input type="search" placeholder="검색어 입력" aria-label="검색어 입력" class="form-control">
+
+          </form>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- 메인 콘텐츠 영역 -->
+  <main>
+    <!--1.  메인 슬라이드 -->
+    <article id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <!-- 콘트롤버튼 -->
+      <div class="carousel-indicators">
+        <button type="button" class="active" aria-label="slide1" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-current="true"></button>
+        <button type="button" aria-label="slide2" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+        <button type="button" aria-label="slide3" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- 슬라이드 박스 -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h3>삶의 향기 동서문학상</h3>
+          <img src="./images/slide1.jpg" alt="1">
+        </div>
+        <div class="carousel-item">
+          <h3>동서식품 꿈의 도서관</h3>
+          <img src="./images/slide2.jpg" alt="2">
+        </div>
+        <div class="carousel-item">
+          <h3>맥심 사랑의 향기</h3>
+          <img src="./images/slide3.jpg" alt="3">
+        </div>
+      </div>
+      <!-- 좌측버튼 -->
+      <button type="button" class="carousel-control-prev" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <!-- 우측버튼 -->
+      <button type="button" class="carousel-control-next" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </article>
+
+    <!-- 2. 가로 3단 목록 콘텐츠 -->
+    <article class="container mt-5 mb-3">
+      <div class="row">
+        <h2>사회공헌</h2>
+        <div class="col-lg-4 text-center">
+          <div class="cont2">
+            <img src="./images/esg1.jpg" alt="">
+          </div>
+          <h3>동서식품 장학회</h3>
+          <p>인재를 양성하여 국가 발전에 기여하는
+            동서식품 장학회</p>
+        </div>
+
+        <div class="col-lg-4 text-center">
+          <div class="cont2">
+            <img src="./images/esg2.jpg" alt="">
+          </div>
+          <h3>동서커피 클래식</h3>
+          <p>함께하는 삶의 향기
+            동서커피클래식</p>
+        </div>
+
+        <div class="col-lg-4 text-center">
+          <div class="cont2">
+            <img src="./images/esg3.jpg" alt="">
+          </div>
+          <h3>맥심커피배 입신최강전</h3>
+          <p>국내 바둑 최강자를 가리는
+            맥심커피배 입신최강전</p>
+        </div>
+      </div>
+    </article>
+    <!-- 3. 점보트론 -->
+    <article class="container">
+      <div class="jumbotron text-center bg-body-tertiary rounded-3">
+        <h2>동서식품</h2>
+        <p class="txt01">다양한 계열의 커피제품들과 커피크리머, 녹차, 곡물차, 시리얼, 벌꿀, 치즈, 비스킷 등 최고 품질의 제품들로 한국 식품 문화의 선진화를<br> 선도해 오고 있는 동서식품은 끊임없는 투자와 연구개발로 항상 고객만족을 위해 최선을 다하고 있습니다.
+          <br><br>
+          늘 고객을 최우선으로 생각하고 고품질의 제품 생산, 사회적 책임실현, 환경을 생각하는 경영으로 여러분의 삶에 향기를 가져다 드리는<br> 식품 회사가 되도록 노력하겠습니다.
+      <p><a href="#" title="" class="btn btn-primary btn-mg">더보기</a></p>
+      </div>
+    </article>
+  </main>
+
+  <!-- 4. 가로 4단 목록 콘텐츠 -->
+  <article class="container p-5">
+    <div class="row">
+      <h2>DONGSUH NEWS</h2>
+      <div class="col-xs-12 col-sm-6 col-md-3 cont4">
+        
+        <img src="./images/cont4_01.jpg" alt="">
+        <p>동서식품, 컬러오브맥심 한정판 패키지 출시</p>
+        <a href="#" title="" class="btn btn-light btn-line">더보기</a>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-3 cont4">
+        <!-- <h2>Title</h2> -->
+        <img src="./images/cont4_02.jpg" alt="">
+        <p>동서식품 '맥심골목', 광고주가 뽑은 올행의 마케터상 수상</p>
+        <a href="#" title="" class="btn btn-light btn-line">더보기</a>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 cont4">
+        <!-- <h2>Title</h2> -->
+        <img src="./images/cont4_03.jpg" alt="">
+        <p>동서식품, 다문화 한부모 가정과 함께하는 김장 봉사활동 진행</p>
+        <a href="#" title="" class="btn btn-light btn-line">더보기</a>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 cont4">
+        <!-- <h2>Title</h2> -->
+        <img src="./images/cont4_04.jpg" alt="">
+        <p>동서식품 '제 15회 동서커피 클래식', 11월 12일 대구서 개최</p>
+        <a href="#" title="" class="btn btn-light btn-line">더보기</a>
+      </div>
+    </div>
+
+  </article>
+  <!-- 하단푸터 -->
+  <footer class="container bg-dark pt-3 pb-3">
+    <div class="float-end">
+      <a href="#" title="위로바로가기" class="link-light text-decoration-none">Top</a>
+    </div>
+    <p>&copy;2025 Company, Inc. &middot;
+      <a href="#" title="이용약관" class="link-light text-decoration-none">Privacy</a>
+      <a href="#" title="이용약관" class="link-light text-decoration-none">Terms</a>
+    </p>
+
+
+  </footer>
+</body>
+</html>

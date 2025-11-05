@@ -24,7 +24,7 @@ git config --global --list
 7)git status(정보확인, 파일목록 확인, 초록색으로 표시)
  git status
 
-8)git commit -m '기록한 메세지 내용'
+8)git commit -m '기록할 메세지 내용'
   ->글자색상 흰색
 
 9) git log(기록 남긴 시점 확인)
@@ -41,7 +41,7 @@ git config --global --list
 2. 수정하고 다시 업로드하는 경우
 6) git add .  (폴더안에 모든 폴더, 파일 추적함) 
 
-8)git commit -m '기록한 메세지 내용'
+8)git commit -m '기록할 메세지 내용'
   ->글자색상 흰색
 
 13) git push origin +main  (파일, 폴더 업로드)

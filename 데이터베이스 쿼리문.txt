@@ -1,0 +1,103 @@
+localhost or 127.0.0.1
+
+http://localhost/1104/fruit_search.php
+http://127.0.0.1/1104/fruit_search.php
+
+SQL : (Structure Query Language)의 약자 '구조화된 언어'
+SQL CRUD명령어 정리해줘
+-------------------------------------------------------------
+
+DB언어 - Create(생성), Read(조회), Update(수정), Delete(삭제)
+1. DDL(데이터 정의어)
+    create(생성), alter(수정), drop(삭제) 등..
+
+2. DML(데이터 조작어)
+   insert, select, update, delete
+    
+3. DCL(데이터 제어어)
+  grant(사용자에게 권한부여), remoke(사용자에게 권한 철회)
+
+-------------------------------------------------------------
+//1. 테이블 조회하기(show)
+show tables; 
+
+//2. 테이블 데이터 입력(insert into)
+insert into customer values('레스토랑 가야','강남구 역삼동 3번지','02-1258-9956');
+insert into customer values ('카페신라', '강남구 역삼4동 1번지', '02-1258-1313');
+insert into customer values ('서강대교식당', '강남구 역삼5동 6번지', '02-1258-1315');
+insert into customer values ('부바레스토랑', '송파구 문정동 8번지', '02-1258-6666');
+insert into customer values ('동경반점', '강남구 역삼8동 1번지', '02-1258-4321');
+
+//3. 테이블 데이터 조회
+select * from 테이블명;
+
+//4. goods 테이블 생성하기
+create table 테이블명(컬럼명 데이터형식(개수), 컬럼명 데이터형식(개수))
+create table goods(g_code int(11),  g_name varchar(20),  g_cost int(11));
+
+//5. 테이블 데이터 입력하기(insert)
+insert into 테이블명 values (값1, 값2, 값3);
+
+insert into goods values (10, '만두세트', 300);
+insert into goods values (12, '해물국수세트', 880);
+insert into goods values (15, '냉동한식세트', 750);
+insert into goods values (22, '중국식만두', 200);
+insert into goods values (25, '꼬마만두', 250);
+insert into goods values (36, '보리빵', 300);
+insert into goods values (57, '녹차', 50);
+insert into goods values (68, '우롱차', 80);
+
+//6. 테이블 데이터 삭제(조건식)
+delete from goods where g_name='만두세트';
+delete from customer where c_name='레스토랑 가야';
+---------------------------------------------------------------
+데이터 조회하기
+select * from 테이블명;
+---------------------------------------------------------------
+
+//7. order 테이블 만들기
+create table 테이블명(컬럼명 데이터 형식(개수), 컬럼명 데이터 형식(개수));
+create table orders(o_day varchar(20), c_name varchar(20), g_code int(11), o_num int(11));
+
+//8. 테이블 데이터 삽입하기(insert into)
+insert into orders values('25-03-01', '부바레스토랑',10,10);
+insert into orders values ('25-03-02', '레스토랑가야', 22, 12);
+insert into orders values ('25-03-02', '동경반점', 15, 12);
+insert into orders values ('25-03-03', '서강대교식당', 68, 4);
+insert into orders values ('25-03-04', '부바레스토랑', 57, 15);
+insert into orders values ('25-03-05', '동경반점', 25, 21);
+insert into orders values ('25-03-06', '카페신라', 36, 6);
+insert into orders values ('25-03-07', '서강대교식당', 15, 12);
+insert into orders values ('25-03-08', '부바레스토랑', 36, 13);
+insert into orders values ('25-03-09', '레스토랑가야', 22, 8);
+insert into orders values ('25-03-10', '동경반점', 22, 10);
+insert into orders values ('25-03-12', '부바레스토랑', 57, 5);
+insert into orders values ('25-03-12', '서강대교식당', 15, 3);
+insert into orders values ('25-03-12', '서강대교식당', 10, 12);
+
+//9. 테이블 조회하기
+
+//10. 3개의 테이블 데이터를 활용하여 데이터 조회(출력)하기
+
+//11. 실습예제
+
+문1) 상품 이름이 '만두'라는 글자가 들어간 상품명 출력하기
+
+select * from goods where g_name like '%만두%';
+
+문2) 주문정보 테이블에서 '레스토랑' 글자가 들어간 '날짜(o_day)', '이름(c_name)'을 출력하기
+
+select o_day 주문일, c_name 상호명 from orders where c_name like '%레스토랑%';
+
+문3) 고객테이블(customer)에서 역삼동에 위치한 상호명, 주소, 전화번호를 이름순으로 출력하시오.
+
+select c_name 상호명, c_address 주소, c_tel 전화번호 from customer where c_address like '%역삼동%';
+
+문4) orders 테이블에서 주문 수량(o_num)이 10개 이상 주문한 상호명(c_name)을  중복없이(distinct) 출력하시오.
+
+select distinct c_name 상호명 from orders where o_num>=10;
+
+
+
+
+
