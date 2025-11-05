@@ -1,6 +1,8 @@
 깃주소
 https://github.com/ijh950809-dotcom/bootstrap2025.git
 
+https://ijh950809-dotcom.github.io/bootstrap2025/              <- (학습목차링크)
+
 1. 처음작업시 
  1)전역구성 설정
 git config --global core.autocrlf true
@@ -45,3 +47,22 @@ git config --global --list
   ->글자색상 흰색
 
 13) git push origin +main  (파일, 폴더 업로드)
+-------------------------------------
+
+git bash 실행하여 아래 명령어로  github계정에 업로드하기
+
+
+5)git status(정보확인, 파일목록 확인, 빨간색으로 표시)
+ git status
+
+6) git add .  (폴더안에 모든 폴더, 파일 추적함) 
+
+7)git status(정보확인, 파일목록 확인, 초록색으로 표시)
+ git status
+
+8)git commit -m '기록할 메세지 내용'
+  ->글자색상 흰색
+
+12) git branch -m master main
+
+13) git push origin +main    (파일, 폴더 업로드)
